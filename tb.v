@@ -26,7 +26,7 @@ module tb;
                   .r2(mut0_r2)
                   );
 
-
+  
 
   // Dump all nets to a vcd file called tb.vcd
   initial

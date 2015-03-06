@@ -1,9 +1,9 @@
 module inv (/*AUTOARG*/
-  // Outputs
-  zn,
-  // Inputs
-  i
-  );
+   // Outputs
+   zn,
+   // Inputs
+   i
+   );
   parameter DELAY = 1;
   
   input i;
@@ -14,11 +14,11 @@ module inv (/*AUTOARG*/
 endmodule // inv
 
 module buff (/*AUTOARG*/
-  // Outputs
-  z,
-  // Inputs
-  i
-  );
+   // Outputs
+   z,
+   // Inputs
+   i
+   );
   parameter DELAY = 1;
   
   input i;
@@ -31,11 +31,11 @@ endmodule // buff
 
 
 module and2 (/*AUTOARG*/
-  // Outputs
-  z,
-  // Inputs
-  a, b
-  );
+   // Outputs
+   z,
+   // Inputs
+   a, b
+   );
 
   parameter DELAY = 1;
   input a,b;
@@ -45,12 +45,30 @@ module and2 (/*AUTOARG*/
   
 endmodule // and2
 
+
+module nand2 (/*AUTOARG*/
+   // Outputs
+   zn,
+   // Inputs
+   a, b
+   );
+
+   parameter DELAY = 1;
+   input a,b;
+   output zn;
+   
+   assign #DELAY zn= !(a & b);
+   
+endmodule // nand2
+
+
+
 module and3 (/*AUTOARG*/
-  // Outputs
-  z,
-  // Inputs
-  a, b, c
-  );
+   // Outputs
+   z,
+   // Inputs
+   a, b, c
+   );
 
   parameter DELAY = 1;
   input a,b,c;
@@ -58,16 +76,51 @@ module and3 (/*AUTOARG*/
   
   assign #DELAY z= a & b & c;
   
-endmodule // and2
+endmodule // and3
+
+module nand3 (/*AUTOARG*/
+   // Outputs
+   zn,
+   // Inputs
+   a, b, c
+   );
+
+   parameter DELAY = 1;
+   input a,b,c;
+   output zn;
+   
+   assign #DELAY zn= !(a & b & c);
+   
+endmodule // nand3
+
+
+
+module nand4 (/*AUTOARG*/
+              // Outputs
+              zn,
+              // Inputs
+              a, b, c, d
+              );
+
+   parameter DELAY = 1;
+   input a,b,c,d;
+   output zn;
+   
+   assign #DELAY zn= !(a & b & c & d);
+   
+endmodule // nand4
+
+
+
 
 
 
 module or2 (/*AUTOARG*/
-  // Outputs
-  z,
-  // Inputs
-  a, b
-  );
+   // Outputs
+   z,
+   // Inputs
+   a, b
+   );
 
   parameter DELAY = 1;
   input a,b;
@@ -78,11 +131,11 @@ module or2 (/*AUTOARG*/
 endmodule // and2
 
 module rs_ff (/*AUTOARG*/
-  // Outputs
-  q, qn,
-  // Inputs
-  set, reset, async_rst_neg
-  );
+   // Outputs
+   q, qn,
+   // Inputs
+   set, reset, async_rst_neg
+   );
   
   parameter DELAY = 1;
   
@@ -124,11 +177,11 @@ endmodule // rs_ff
 
 
 module mux2 (/*AUTOARG*/
-  // Outputs
-  z,
-  // Inputs
-  a0, a1, s
-  );
+   // Outputs
+   z,
+   // Inputs
+   a0, a1, s
+   );
   
   input a0;
   input a1;
@@ -149,23 +202,29 @@ module mux2 (/*AUTOARG*/
   
   
 endmodule // mux2
-/*  
- Local Variables:
- verilog-library-directories:(
- "."
- )
- End:
- */
 
+// RS latch with inverted inputs
+module rs_latch_ii(/*AUTOARG*/
+   // Outputs
+   q, qn,
+   // Inputs
+   sn, rn, rstn
+   );
+   input sn;
+   input rn;
+   input rstn;
+   output q;
+   output qn;
+   
 
+   nand2 U_NAND2(.zn(q),.a(sn),.b(qn));
+   nand3 U_NAND3(.zn(qn),.a(rn),.b(q),.c(rstn));
+   
 
-/*  
- Local Variables:
- verilog-library-directories:(
- "."
- )
- End:
- */
+                 
+endmodule // rs_latch
+
+                 
 
 
 
