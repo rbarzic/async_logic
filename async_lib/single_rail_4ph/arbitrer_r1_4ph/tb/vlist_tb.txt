@@ -3,3 +3,4 @@ tb.v
 ../../../../async_lib/muller2.v
 ../../../../async_lib/mutex.v
 ../../../../misc_lib/std_cells.v
+../../../../tb_lib/four_phase_assertion.v
