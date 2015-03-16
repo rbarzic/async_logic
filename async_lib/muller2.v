@@ -1,11 +1,11 @@
 //   Project     : async
-//   File        : cmuller.v
-//   Description : Verilog model of a C-Muller element
+//   File        : muller2.v
+//   Description : Verilog model of a Muller/C-element (2 inputs)
 //   Copyright 2009 Ronan BARZIC
 
 `timescale 1ns/1ns
 
-module cmuller(/*AUTOARG*/
+module muller2(/*AUTOARG*/
    // Outputs
    z,
    // Inputs
@@ -34,4 +34,4 @@ module cmuller(/*AUTOARG*/
 
 
 
-endmodule // cmuller
+endmodule // muller2
