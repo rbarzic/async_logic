@@ -1,5 +1,5 @@
 comp:
-	iverilog -I../../../../tb_lib  -I$(OVL_TOP) -o tb  -c vlist_tb.txt
+	iverilog -I../../../../tb_lib  -I$(OVL_TOP) -I$(OVL_TOP) -DOVL_ASSERT_ON -DOVL_VERILOG -o tb  -c vlist_tb.txt
 
 run:
 	vvp tb +memory=test.vmem
