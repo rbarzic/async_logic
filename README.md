@@ -28,3 +28,15 @@ From figure 3.16, page 42 :
 From figure 5.21, page 79 :
 
 ![Handshake Arbitrer](./doc/arbitrer_r1_4ph.png "arbitrer_r1_4ph.v")
+
+
+## MISC
+
+## Pausible clock
+
++ Reference : Demystifying Data-Driven and Pausible Clocking Schemes. Robert Mullins and Simon Moore - Computer Laboratory, University of Cambridge
+
+From figure 1, page 2 :
+
+![Pausible Clock](./doc/pausible_clock.png "pausible_clock.v")
+
