@@ -5,12 +5,9 @@ module tb_sync_merge;
    /*AUTOREG*/
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
-   wire                 a0_r;                   // From U_SYNC_MERGE of sync_merge.v
    wire                 a1;                     // From U_SYNC_MERGE of sync_merge.v
    wire                 a2;                     // From U_SYNC_MERGE of sync_merge.v
    wire                 r0;                     // From U_SYNC_MERGE of sync_merge.v
-   wire                 r1_r;                   // From U_SYNC_MERGE of sync_merge.v
-   wire                 r2_r;                   // From U_SYNC_MERGE of sync_merge.v
    // End of automatics
 
    reg                  r1,r2;
@@ -25,9 +22,6 @@ module tb_sync_merge;
                             .a1                 (a1),
                             .a2                 (a2),
                             .r0                 (r0),
-                            .a0_r               (a0_r),
-                            .r1_r               (r1_r),
-                            .r2_r               (r2_r),
                             // Inputs
                             .r1                 (r1),
                             .r2                 (r2),
