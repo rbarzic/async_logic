@@ -6,3 +6,6 @@
 /async_lib/single_rail_4ph/arbitrer_r1_4ph/tb/tb.vcd
 /async_lib/single_rail_4ph/arbitrer_r1_4ph/tb/tb
 /async_lib/single_rail_4ph/arbitrer_r1_4ph/tb/tb.vcd
+/async_lib/misc/sync_merge/tb/tb
+*.vcd
+/async_lib/pausible_clock/tb/tb
