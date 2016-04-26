@@ -264,6 +264,37 @@ module latch (/*AUTOARG*/
 
    end
 endmodule // latch
+
+
+module latches (/*AUTOARG*/
+              // Outputs
+              q,
+              // Inputs
+              en, i, rstn
+              );
+   parameter LATCH_BITS = 8;
+   localparam LATCH_MSB= LATCH_BITS-1;
+
+   input en;
+   input [LATCH_MSB:0] i;
+   input rstn;
+   output [LATCH_MSB:0] q;
+   reg    [LATCH_MSB:0] q;
+
+   always @* begin
+      if(rstn == 1'b0)
+        q <= 0;
+      else
+        if(en)
+          q <= i;
+
+   end
+endmodule // latch
+
+
+
+
+
 /*
  Local Variables:
  verilog-library-directories:(

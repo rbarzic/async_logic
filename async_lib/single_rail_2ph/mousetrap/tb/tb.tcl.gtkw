@@ -1,0 +1,70 @@
+[*]
+[*] GTKWave Analyzer v3.3.64 (w)1999-2014 BSI
+[*] Tue Apr 26 12:29:32 2016
+[*]
+[dumpfile] "/home/roba/perso/github/async_logic/async_lib/single_rail_2ph/mousetrap/tb/tb.vcd"
+[dumpfile_mtime] "Tue Apr 26 12:28:01 2016"
+[dumpfile_size] 5665
+[savefile] "/home/roba/perso/github/async_logic/async_lib/single_rail_2ph/mousetrap/tb/tb.tcl.gtkw"
+[timestart] 0
+[size] 1920 1171
+[pos] -1 -1
+*-18.415413 5000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[sst_width] 207
+[signals_width] 199
+[sst_expanded] 1
+[sst_vpaned_height] 356
+@22
+tb.data0[7:0]
+tb.data1[7:0]
+tb.data2[7:0]
+tb.data3[7:0]
+@200
+-STAGE0
+@28
+tb.U_MOUSETRAP_STAGE0.reqN
+tb.U_MOUSETRAP_STAGE0.doneN
+tb.U_MOUSETRAP_STAGE0.ackN
+tb.U_MOUSETRAP_STAGE0.ackNm1
+tb.U_MOUSETRAP_STAGE0.latch_en
+@22
+tb.U_MOUSETRAP_STAGE0.l_in[8:0]
+tb.U_MOUSETRAP_STAGE0.l_out[8:0]
+@200
+-STAGE1
+@28
+tb.U_MOUSETRAP_STAGE1.reqN
+tb.U_MOUSETRAP_STAGE1.doneN
+tb.U_MOUSETRAP_STAGE1.ackN
+tb.U_MOUSETRAP_STAGE1.ackNm1
+tb.U_MOUSETRAP_STAGE1.latch_en
+@22
+tb.U_MOUSETRAP_STAGE1.l_in[8:0]
+tb.U_MOUSETRAP_STAGE1.l_out[8:0]
+@200
+-STAGE2
+@28
+tb.U_MOUSETRAP_STAGE2.reqN
+tb.U_MOUSETRAP_STAGE2.doneN
+tb.U_MOUSETRAP_STAGE2.ackN
+tb.U_MOUSETRAP_STAGE2.ackNm1
+tb.U_MOUSETRAP_STAGE2.latch_en
+@23
+tb.U_MOUSETRAP_STAGE2.l_out[8:0]
+@22
+tb.U_MOUSETRAP_STAGE2.l_in[8:0]
+@200
+-TopLevel
+@28
+tb.req3
+tb.ack2
+tb.a
+tb.rst_async_n
+tb.U_MOUSETRAP_STAGE0.rstn
+@22
+tb.U_MOUSETRAP_STAGE2.l_out[8:0]
+@28
+tb.U_MOUSETRAP_STAGE2.latch_en
+[pattern_trace] 1
+[pattern_trace] 0

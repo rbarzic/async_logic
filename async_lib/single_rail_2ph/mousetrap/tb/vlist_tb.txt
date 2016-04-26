@@ -1,0 +1,6 @@
+tb.v
+../mousetrap_elt.v
+../../../../async_lib/toggle_simple.v
+../../../../misc_lib/std_cells.v
+../../../../tb_lib/two_phase_event_gen.v
+../../../../tb_lib/two_phase_slave.v
