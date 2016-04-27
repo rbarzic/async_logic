@@ -10,6 +10,7 @@ module mousetrap_elt (/*AUTOARG*/
    reqN, ackN, datain, rstn
    );
    parameter WIDTH=8;
+   parameter RESET_VALUE={WIDTH{1'b0}};
 
    // Left side
    output ackNm1;
@@ -46,7 +47,9 @@ module mousetrap_elt (/*AUTOARG*/
    assign ackNm1  = doneN;
 
 
-   latches #(.LATCH_BITS(WIDTH+1)) U_LATCHES(
+   latches #(.LATCH_BITS(WIDTH+1),
+             .RESET_VALUE({1'b0,RESET_VALUE})
+             ) U_LATCHES(
                      .q(l_out),
                      .i(l_in),
                      .en(latch_en),

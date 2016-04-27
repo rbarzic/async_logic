@@ -273,6 +273,8 @@ module latches (/*AUTOARG*/
               en, i, rstn
               );
    parameter LATCH_BITS = 8;
+   parameter RESET_VALUE = {LATCH_BITS{1'b0}};
+
    localparam LATCH_MSB= LATCH_BITS-1;
 
    input en;
@@ -283,7 +285,7 @@ module latches (/*AUTOARG*/
 
    always @* begin
       if(rstn == 1'b0)
-        q <= 0;
+        q <= RESET_VALUE;
       else
         if(en)
           q <= i;
