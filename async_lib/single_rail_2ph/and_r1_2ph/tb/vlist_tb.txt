@@ -1,0 +1,10 @@
+tb.v
+../and_r1_2ph.v
+../../arbitrer_r1_2ph/arbitrer_r1_2ph.v
+../../../../async_lib/muller2.v
+../../../../async_lib/mutex.v
+../../../../async_lib/toggle.v
+../../../../async_lib/toggle_simple.v
+../../../../misc_lib/std_cells.v
+../../../../tb_lib/two_phase_event_gen.v
+../../../../tb_lib/two_phase_slave.v

@@ -1,0 +1,43 @@
+[*]
+[*] GTKWave Analyzer v3.3.64 (w)1999-2014 BSI
+[*] Wed Apr 27 07:58:25 2016
+[*]
+[dumpfile] "/home/roba/perso/github/async_logic/async_lib/single_rail_2ph/and_r1_2ph/tb/tb.vcd"
+[dumpfile_mtime] "Wed Apr 27 07:03:50 2016"
+[dumpfile_size] 548190
+[savefile] "/home/roba/perso/github/async_logic/async_lib/single_rail_2ph/and_r1_2ph/tb/tb.tcl.gtkw"
+[timestart] 9726200
+[size] 1920 1171
+[pos] -1 -1
+*-15.750692 9787100 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[treeopen] tb.U_ASYNC_AND.
+[sst_width] 370
+[signals_width] 94
+[sst_expanded] 1
+[sst_vpaned_height] 356
+@200
+-Port #1
+@28
+tb.r1
+tb.a1
+@200
+-Port #2
+@28
+tb.r2
+tb.a2
+@200
+-Output
+@28
+tb.r
+tb.a
+@200
+-Arbitrer
+@28
+tb.U_ASYNC_AND.U_ARBITRER.r1
+tb.U_ASYNC_AND.U_ARBITRER.r2
+tb.U_ASYNC_AND.U_ARBITRER.g1
+@29
+tb.U_ASYNC_AND.U_ARBITRER.d1
+[pattern_trace] 1
+[pattern_trace] 0
