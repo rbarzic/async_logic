@@ -35,25 +35,45 @@ module fork_cond2_r1_ph (/*AUTOARG*/
    // End of automatics
    /*AUTOWIRE*/
 
-   wire                port1_active;
-   wire                port2_active;
-   wire                muxsel;
-   wire                rstn;
-   wire [WIDTH-1:0]    dataout;
+   wire                 false1, false2;
 
-   assign port1_active  = r1 ^a1;
-   assign port2_active  = r2 ^a2;
+   select U_SELECT1_OUT(
+                    .in(r),
+                    .sel(cond1),
+                    .false(false1),
+                    .true(r1),
+                    .rstn()
+                    );
+   mux2 U_MUX1_IN(
+                        .a0(false1),
+                        .a1(a1),
+                        .s(cond1),
+                        .z(a1mux)
+                        );
 
-   rs_ff U_RS(
-              .set(port2_active),
-              .reset(port1_active),
-              .q(muxsel),
-              .qn(),
-              .async_rst_neg(rstn)
-              );
+
+   select U_SELECT2_OUT(
+                        .in(r),
+                        .sel(cond2),
+                        .false(false2),
+                        .true(r2),
+                        .rstn(rstn)
+                        );
+   mux2 U_MUX2_IN(
+                  .a0(false2),
+                  .a1(a2),
+                  .s(cond2),
+                  .z(a2mux)
+                  );
 
 
-   assign dataout = muxsel ? datain2 : datain1;
+   muller3 U_MULLER3(
+                     .a(r),
+                     .b(a1mux),
+                     .c(a2mux),
+                     .z(a),
+                     .rstn(rstn),
+                     );
 
 
 
