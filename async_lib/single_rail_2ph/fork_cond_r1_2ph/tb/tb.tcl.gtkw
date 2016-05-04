@@ -1,0 +1,31 @@
+[*]
+[*] GTKWave Analyzer v3.3.49 (w)1999-2013 BSI
+[*] Mon Mar 16 17:59:56 2015
+[*]
+[dumpfile] "/home/ronan/perso/github/async_logic/async_lib/single_rail_4ph/arbitrer_r1_4ph/tb/tb.vcd"
+[dumpfile_mtime] "Mon Mar 16 17:56:42 2015"
+[dumpfile_size] 1952
+[savefile] "/home/ronan/perso/github/async_logic/async_lib/single_rail_4ph/arbitrer_r1_4ph/tb/tb.tcl.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-14.039544 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[sst_width] 213
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 155
+@200
+-Input ports
+@28
+tb.r1
+tb.a1
+tb.r2
+tb.a2
+@201
+-Output port
+@28
+tb.r0
+tb.a0
+[pattern_trace] 1
+[pattern_trace] 0

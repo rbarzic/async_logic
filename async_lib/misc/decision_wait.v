@@ -23,8 +23,8 @@ module decision_wait (/*AUTOARG*/);
    /*AUTOWIRE*/
    wire   xor1, xor2;
 
-   xor2 U_XOR2_1 (.a(fire),.b(z2),.z(xor1));
-   xor2 U_XOR2_2 (.a(z1),.b(fire),.z(xor2));
+   xor2 U_XOR2_1 (.a(in),.b(z2),.z(xor1));
+   xor2 U_XOR2_2 (.a(z1),.b(in),.z(xor2));
 
 
    // ack feedback on input ports
