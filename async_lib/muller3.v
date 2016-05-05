@@ -20,11 +20,10 @@ module muller3 (/*AUTOARG*/
    /*AUTOOUTPUT*/
 
    /*AUTOREG*/
-   // Beginning of automatic regs (for this module's undeclared outputs)
-   reg                  z;
-   // End of automatics
    /*AUTOWIRE*/
    wire                 internal;
+   wire                 z;
+
 
    muller2 U_MULLER0(.a(a), .b(b), .rstn(rstn), .z(internal));
    muller2 U_MULLER1(.a(internal), .b(c), .rstn(rstn), .z(z));

@@ -2,16 +2,16 @@
 
 
 
-module fork_cond2_r1_ph (/*AUTOARG*/
+module fork_cond2_r1_2ph (/*AUTOARG*/
    // Outputs
-   r1, r2,
+   a, r1, r2,
    // Inputs
-   r, a, a1, cond1, a2, cond2, rstn
+   r, a1, cond1, a2, cond2, rstn
    );
    parameter WIDTH = 8;
 
    input r;
-   input a;
+   output a;
 
    output  r1;
    input a1;
@@ -29,20 +29,18 @@ module fork_cond2_r1_ph (/*AUTOARG*/
    /*AUTOOUTPUT*/
 
    /*AUTOREG*/
-   // Beginning of automatic regs (for this module's undeclared outputs)
-   reg                  r1;
-   reg                  r2;
-   // End of automatics
    /*AUTOWIRE*/
 
    wire                 false1, false2;
+   wire                 r1,r2;
+   wire                 a;
 
    select U_SELECT1_OUT(
                     .in(r),
                     .sel(cond1),
                     .false(false1),
                     .true(r1),
-                    .rstn()
+                    .rstn(rstn)
                     );
    mux2 U_MUX1_IN(
                         .a0(false1),
@@ -72,7 +70,7 @@ module fork_cond2_r1_ph (/*AUTOARG*/
                      .b(a1mux),
                      .c(a2mux),
                      .z(a),
-                     .rstn(rstn),
+                     .rstn(rstn)
                      );
 
 

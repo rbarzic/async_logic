@@ -19,12 +19,9 @@ module call (/*AUTOARG*/
    /*AUTOOUTPUT*/
 
    /*AUTOREG*/
-   // Beginning of automatic regs (for this module's undeclared outputs)
-   reg                  d1;
-   reg                  d2;
-   reg                  r;
-   // End of automatics
    /*AUTOWIRE*/
+   wire                 d1, d2, r;
+
 
    xor2 U_XOR2 (.a(r1),.b(r2),.z(r));
    decision_wait U_DW(
@@ -35,7 +32,7 @@ module call (/*AUTOARG*/
                       .z2(d2),
 
                       .fire(d),
-                      .rstn(rstn),
+                      .rstn(rstn)
 
                       );
 

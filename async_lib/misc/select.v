@@ -30,7 +30,7 @@ module select (/*AUTOARG*/
 
    xor2 U_XOR2_1 (.a(in),.b(true),.z(xor1));
    xor2 U_XOR2_2 (.a(false),.b(in),.z(xor2));
-   inv  U_INV_SEL(.a(sel), .zn(seln));
+   inv  U_INV_SEL(.i(sel), .zn(seln));
 
    latch U_LATCH1(.i(xor1), .en(seln), .q(false), .rstn(rstn));
    latch U_LATCH2(.i(xor2), .en(sel), .q(true), .rstn(rstn));

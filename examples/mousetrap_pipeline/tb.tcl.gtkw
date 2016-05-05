@@ -1,0 +1,80 @@
+[*]
+[*] GTKWave Analyzer v3.3.64 (w)1999-2014 BSI
+[*] Thu May  5 07:57:15 2016
+[*]
+[dumpfile] "/home/ronan/perso/github/async_logic/examples/mousetrap_pipeline/tb.vcd"
+[dumpfile_mtime] "Thu May  5 07:56:28 2016"
+[dumpfile_size] 13319
+[savefile] "/home/ronan/perso/github/async_logic/examples/mousetrap_pipeline/tb.tcl.gtkw"
+[timestart] 0
+[size] 1600 851
+[pos] -1 -1
+*-15.198733 51000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[treeopen] tb.U_CHIP.
+[sst_width] 348
+[signals_width] 214
+[sst_expanded] 1
+[sst_vpaned_height] 243
+@22
+tb.U_CHIP.instruction[31:0]
+@28
+tb.U_CHIP.rstn
+tb.start
+tb.U_CHIP.U_FORK_EXE.r
+tb.U_CHIP.req_pc
+tb.U_CHIP.pc_done
+tb.U_CHIP.U_ASYNC_MEM.req
+tb.U_CHIP.U_ASYNC_MEM.ack
+@22
+tb.U_CHIP.U_ASYNC_MEM.dout[31:0]
+@28
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.reqN
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.ackNm1
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.doneN
+@800200
+-MOUSETRAP_INSTRUCTION
+@28
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.reqN
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.ackNm1
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.ackN
+@22
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.datain[31:0]
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.dataout[31:0]
+@28
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.doneN
+@22
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.l_in[32:0]
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.l_out[32:0]
+@28
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.latch_en
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.latch_en_n
+tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.rstn
+@1000200
+-MOUSETRAP_INSTRUCTION
+@800200
+-FORK_EXE
+@28
+tb.U_CHIP.U_FORK_EXE.r
+tb.U_CHIP.U_FORK_EXE.a
+tb.U_CHIP.U_FORK_EXE.r1
+tb.U_CHIP.U_FORK_EXE.a1
+tb.U_CHIP.U_FORK_EXE.r2
+tb.U_CHIP.U_FORK_EXE.a2
+@c00201
+-Internal
+@28
+tb.U_CHIP.U_FORK_EXE.a1mux
+tb.U_CHIP.U_FORK_EXE.a2mux
+tb.U_CHIP.U_FORK_EXE.cond1
+tb.U_CHIP.U_FORK_EXE.cond2
+tb.U_CHIP.U_FORK_EXE.false1
+tb.U_CHIP.U_FORK_EXE.false2
+@1401201
+-Internal
+@28
+tb.U_CHIP.U_FORK_EXE.rstn
+@1000200
+-FORK_EXE
+[pattern_trace] 1
+[pattern_trace] 0

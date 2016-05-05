@@ -4,7 +4,12 @@
 //  From figure 3.11, page 38
 // http://apt.cs.manchester.ac.uk/publications/thesis/paver94_phd.php
 
-module decision_wait (/*AUTOARG*/);
+module decision_wait (/*AUTOARG*/
+   // Outputs
+   z1, z2,
+   // Inputs
+   a1, a2, fire, rstn
+   );
 
    input a1;
    input a2;
@@ -22,6 +27,8 @@ module decision_wait (/*AUTOARG*/);
    /*AUTOREG*/
    /*AUTOWIRE*/
    wire   xor1, xor2;
+   wire   z1, z2;
+
 
    xor2 U_XOR2_1 (.a(in),.b(z2),.z(xor1));
    xor2 U_XOR2_2 (.a(z1),.b(in),.z(xor2));
