@@ -1,28 +1,28 @@
 [*]
-[*] GTKWave Analyzer v3.3.64 (w)1999-2014 BSI
-[*] Thu May  5 07:57:15 2016
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Tue May 10 10:56:49 2016
 [*]
 [dumpfile] "/home/ronan/perso/github/async_logic/examples/mousetrap_pipeline/tb.vcd"
-[dumpfile_mtime] "Thu May  5 07:56:28 2016"
-[dumpfile_size] 13319
+[dumpfile_mtime] "Tue May 10 10:41:25 2016"
+[dumpfile_size] 18254
 [savefile] "/home/ronan/perso/github/async_logic/examples/mousetrap_pipeline/tb.tcl.gtkw"
 [timestart] 0
-[size] 1600 851
+[size] 1600 847
 [pos] -1 -1
-*-15.198733 51000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-16.198734 136000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] tb.
 [treeopen] tb.U_CHIP.
+[treeopen] tb.U_CHIP.U_CALL_PC.
 [sst_width] 348
-[signals_width] 214
+[signals_width] 267
 [sst_expanded] 1
-[sst_vpaned_height] 243
+[sst_vpaned_height] 380
 @22
 tb.U_CHIP.instruction[31:0]
 @28
 tb.U_CHIP.rstn
 tb.start
 tb.U_CHIP.U_FORK_EXE.r
-tb.U_CHIP.req_pc
 tb.U_CHIP.pc_done
 tb.U_CHIP.U_ASYNC_MEM.req
 tb.U_CHIP.U_ASYNC_MEM.ack
@@ -31,8 +31,44 @@ tb.U_CHIP.U_ASYNC_MEM.dout[31:0]
 @28
 tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.reqN
 tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.ackNm1
+@22
+tb.U_CHIP.pc_fetch[31:0]
+tb.U_CHIP.next_pc_inc[31:0]
+tb.U_CHIP.next_pc_fetch[31:0]
+@28
 tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.doneN
 @800200
+-CALL_PC
+@28
+tb.U_CHIP.U_CALL_PC.r1
+tb.U_CHIP.U_CALL_PC.d1
+tb.U_CHIP.U_CALL_PC.r2
+tb.U_CHIP.U_CALL_PC.d2
+tb.U_CHIP.U_CALL_PC.r
+tb.U_CHIP.U_CALL_PC.d
+@c00200
+-DECISION_WAIT
+@28
+tb.U_CHIP.U_CALL_PC.U_DW.a1
+tb.U_CHIP.U_CALL_PC.U_DW.a2
+tb.U_CHIP.U_CALL_PC.U_DW.z1
+tb.U_CHIP.U_CALL_PC.U_DW.z2
+tb.U_CHIP.U_CALL_PC.U_DW.rstn
+tb.U_CHIP.U_CALL_PC.U_DW.fire
+@1401200
+-DECISION_WAIT
+@1000200
+-CALL_PC
+@800201
+-MOUSETRAP_PC
+@29
+tb.U_CHIP.U_MOUSETRAP_PC.reqN
+tb.U_CHIP.U_MOUSETRAP_PC.ackNm1
+tb.U_CHIP.U_MOUSETRAP_PC.doneN
+tb.U_CHIP.U_MOUSETRAP_PC.ackN
+@1000201
+-MOUSETRAP_PC
+@c00200
 -MOUSETRAP_INSTRUCTION
 @28
 tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.reqN
@@ -50,18 +86,20 @@ tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.l_out[32:0]
 tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.latch_en
 tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.latch_en_n
 tb.U_CHIP.U_MOUSETRAP_INSTRUCTION.rstn
-@1000200
+@1401200
 -MOUSETRAP_INSTRUCTION
-@800200
+@c00200
 -FORK_EXE
 @28
 tb.U_CHIP.U_FORK_EXE.r
 tb.U_CHIP.U_FORK_EXE.a
+tb.U_CHIP.U_FORK_EXE.cond1
+tb.U_CHIP.U_FORK_EXE.cond2
 tb.U_CHIP.U_FORK_EXE.r1
 tb.U_CHIP.U_FORK_EXE.a1
 tb.U_CHIP.U_FORK_EXE.r2
 tb.U_CHIP.U_FORK_EXE.a2
-@c00201
+@c00200
 -Internal
 @28
 tb.U_CHIP.U_FORK_EXE.a1mux
@@ -70,11 +108,38 @@ tb.U_CHIP.U_FORK_EXE.cond1
 tb.U_CHIP.U_FORK_EXE.cond2
 tb.U_CHIP.U_FORK_EXE.false1
 tb.U_CHIP.U_FORK_EXE.false2
-@1401201
+@1401200
 -Internal
 @28
 tb.U_CHIP.U_FORK_EXE.rstn
-@1000200
+@1401200
 -FORK_EXE
+@c00200
+-ARBITRER_PC
+@28
+tb.U_CHIP.U_ARBITRER_PC.a1
+tb.U_CHIP.U_ARBITRER_PC.r1
+tb.U_CHIP.U_ARBITRER_PC.a2
+tb.U_CHIP.U_ARBITRER_PC.r2
+tb.U_CHIP.U_ARBITRER_PC.g1
+tb.U_CHIP.U_ARBITRER_PC.d1
+tb.U_CHIP.U_ARBITRER_PC.g2
+tb.U_CHIP.U_ARBITRER_PC.d2
+@1401200
+-ARBITRER_PC
+@800200
+-SELECT_PC
+@28
+tb.U_CHIP.U_SELECT_PC.r1
+tb.U_CHIP.U_SELECT_PC.a1
+tb.U_CHIP.U_SELECT_PC.r2
+tb.U_CHIP.U_SELECT_PC.a2
+tb.U_CHIP.U_SELECT_PC.muxsel
+@22
+tb.U_CHIP.U_SELECT_PC.datain1[31:0]
+tb.U_CHIP.U_SELECT_PC.datain2[31:0]
+tb.U_CHIP.U_SELECT_PC.dataout[31:0]
+@1000200
+-SELECT_PC
 [pattern_trace] 1
 [pattern_trace] 0
