@@ -26,7 +26,7 @@ module exe_stage (/*AUTOARG*/
 
 
    assign #1 qual_branch = (instruction == 32'hCAFEBABE);
-   assign #1 qual_regwrite = 0;
+   assign #1 qual_regwrite = !qual_branch;
    assign #1 target_address = qual_branch ? 0 : 32'hDEAFBEEF;
 
    assign #delay1 done = req;

@@ -32,7 +32,7 @@ module chip (/*AUTOARG*/
 
                                  // Input port #2
                                  .r2(exe_pc_branch_req),
-                                 .a2(pc_exe_branch_ack),
+                                 .a2(pc_branch_exe_ack),
 
                                  // Output port #1
                                  .g1(arb_pc_req),
@@ -164,14 +164,14 @@ module chip (/*AUTOARG*/
                      .cond1(exe_qual_branch),
                      .cond2(exe_qual_regwrite),
                      // output ports
-                     .r1(exe_branch_req),
-                     .a1(branch_exe_ack),
+                     .r1(exe_pc_branch_req),
+                     .a1(pc_branch_exe_ack),
                      .r2(exe_regwrite_req),
                      .a2(regwrite_exe_ack),
                      .rstn(rstn)
                      );
 
-   assign #8 branch_exe_ack = exe_branch_req;
+   // assign #8 branch_exe_ack = exe_branch_req;
    assign #12 regwrite_exe_ack = exe_regwrite_req;
 
 
