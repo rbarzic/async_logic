@@ -56,18 +56,18 @@ module or_r1_2ph (/*AUTOARG*/
    // If port #2 is one, then the output r
    // is already one and ready (a==1)
    // else we have to wait for a
-   //mux2 U_MUX2_1(.z(d1pre),
-   //              .s(d2),
-   //              .a0(a),
-   //              .a1(g1));
-   //
-   //mux2 U_MUX2_2(.z(d2pre),
-   //              .s(d1),
-   //              .a0(a),
-   //              .a1(g2));
+   mux2 U_MUX2_1(.z(d1pre),
+                 .s(d2),
+                 .a0(a),
+                 .a1(g1));
 
-   or2 U_OR2_1(.z(d1pre), .a(a), .b(d2));
-   or2 U_OR2_2(.z(d2pre), .a(d1), .b(a));
+   mux2 U_MUX2_2(.z(d2pre),
+                 .s(d1),
+                 .a0(a),
+                 .a1(g2));
+
+   //or2 U_OR2_1(.z(d1pre), .a(a), .b(d2));
+   //or2 U_OR2_2(.z(d2pre), .a(d1), .b(a));
 
 
 
