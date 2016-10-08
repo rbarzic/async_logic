@@ -9,3 +9,4 @@
 /async_lib/misc/sync_merge/tb/tb
 *.vcd
 /async_lib/pausible_clock/tb/tb
+tb
