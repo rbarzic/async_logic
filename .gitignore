@@ -10,3 +10,4 @@
 *.vcd
 /async_lib/pausible_clock/tb/tb
 tb
+/async_std_cells/mutex_in_verilog/build/
